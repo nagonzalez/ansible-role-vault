@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  roles:
+    - role: ansible-role-rke
+    - role: ansible-role-rancher
+    - role: ansible-role-vault

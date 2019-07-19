@@ -1,0 +1,17 @@
+---
+- name: Install vault helm chart
+  helm:
+    host: "{{ l_helm_host }}"
+    port: "{{ l_helm_port }}"
+    chart:
+      name: vault
+      version: "{{ vault_crd_helm_chart_version }}"
+      source:
+        type: git
+        location: https://github.com/banzaicloud/banzai-charts.git
+        reference: "vault/{{ vault_crd_helm_chart_version }}"
+        path: vault
+    values: "{{ vault_crd_helm_values }}"
+    state: present
+    name: "{{ vault_crd_helm_release_name }}"
+    namespace: "{{ vault_crd_helm_namespace }}"

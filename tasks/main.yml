@@ -1,0 +1,9 @@
+---
+# setup helm & tiller client
+- include: helm.yml
+
+# install vault operator
+- include: operator.yml
+
+# install vault crd
+- include: vault.yml

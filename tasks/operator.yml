@@ -1,0 +1,16 @@
+---
+- name: Install vault-operator helm chart
+  helm:
+    host: "{{ l_helm_host }}"
+    port: "{{ l_helm_port }}"
+    chart:
+      name: vault-operator
+      version: "{{ vault_operator_helm_chart_version }}"
+      source:
+        type: git
+        location: https://github.com/banzaicloud/banzai-charts.git
+        reference: "vault-operator/{{ vault_operator_helm_chart_version }}"
+        path: vault-operator
+    state: present
+    name: "{{ vault_operator_helm_release_name }}"
+    namespace: "{{ vault_operator_helm_namespace }}"

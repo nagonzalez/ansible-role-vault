@@ -1,0 +1,10 @@
+---
+# defaults file for ansible-role-vault
+vault_operator_helm_chart_version: 0.2.16
+vault_operator_helm_release_name: vault-operator
+vault_operator_helm_namespace: default
+
+vault_crd_helm_chart_version: 0.6.10
+vault_crd_helm_release_name: vault
+vault_crd_helm_namespace: default
+vault_crd_helm_values: {}
