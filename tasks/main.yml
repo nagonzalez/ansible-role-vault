@@ -7,3 +7,6 @@
 
 # install vault crd
 - include: vault.yml
+
+# install webhook
+- include: webhook.yml
